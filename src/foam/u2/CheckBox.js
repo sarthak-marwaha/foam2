@@ -23,10 +23,36 @@ foam.CLASS({
   documentation: 'Checkbox View.',
 
   css: `
-    ^ {
-      margin: 8px 0;
-      padding: 8px;
-    }
+  ^ {
+    padding: 0px !important;
+    -webkit-appearance: none;
+    appearance: none;
+    border-radius: 2px;
+    border: solid 2px /*%GREY2%*/ #5a5a5a;
+    width: 18px;
+    height: 18px;
+    transition: background-color 140ms, border-color 140ms;
+  }
+  ^:checked {
+    background-color: /*%PRIMARY3%*/ #1e1f21;
+    border-color: /*%PRIMARY3%*/ #1e1f21;
+    fill: white;
+  }
+  ^:checked:after{
+    position:relative;
+    top:1;
+    content: url("/images/checkmark-white.svg");
+  }
+  ^ input:focus + label::before {
+    content: ''
+    box-shadow: 0 0 0 3px /*%PRIMARY2%*/ #ffbf47;
+  }
+  ^:hover {
+    cursor: pointer
+  }
+  ^ span, input[type='checkbox']{
+    vertical-align:middle;
+  }
   `,
 
   methods: [
