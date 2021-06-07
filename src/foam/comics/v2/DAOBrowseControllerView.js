@@ -68,7 +68,7 @@ foam.CLASS({
   `,
 
   messages: [
-    { name: 'VIEW_ALL', message: 'View all ' }
+    { name: 'VIEW_ALL', message: 'View all' }
   ],
 
   properties: [
